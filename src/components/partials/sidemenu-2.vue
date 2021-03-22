@@ -1,11 +1,11 @@
 <template>
   <main class="h-full">
     <transition name="fade">
-      <nav id="sidebar" class="w-60 px-10">
-        <div class="">
-          <!--Company Logo here -->
-          <div class="pt-14 flex justify-center">
-               <svg
+      <nav id="sidebar" class="w-60 h-full">
+        <div class="flex items-center px-6 h-4 py-9">
+          <!--Company Name here -->
+          <div class="self-center">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               width="151px"
@@ -105,23 +105,60 @@
               </g>
             </svg>
           </div>
-
-          <!-- User name here -->
-          <div class="border-bt py-6 mt-3">
-            <p class="text-sm primary-white font-normal">Ashley Wong</p>
-          </div>
         </div>
+        <hr />
 
         <!--Routes here -->
-        <div class="pt-5">
-          <ul>
-            <li
-              v-for="(route, index) in routes"
-              :key="index"
-              class="py-2.5 text-sm font-normal primary-white"
+        <div class="px-6 py-5">
+          <ul class="flex list-decimal flex-col">
+            <li>
+              <router-link to="/" class="flex mb-1"
+                ><img
+                  src="@/assets/img/vectors/ic-overview.svg"
+                  alt="overview"
+                />
+                <span class="pt-1 ml-2.5">Overview</span>
+              </router-link>
+            </li>
+
+            <!-- Business Routes here -->
+            <p
+              class="uppercase pt-7 text-sm mb-2.5 font-medium nav-link-header"
             >
-              <router-link :to="route">
-                <span>{{ route }}</span>
+              your business
+            </p>
+
+            <li v-for="(route, index) in routes.business" :key="index">
+              <router-link :to="route.route" class="flex mb-2.5"
+                ><img :src="route.icon" class="pt-0.5" alt="overview" />
+                <span class="pt-1 ml-2.5">{{ route.name }}</span>
+              </router-link>
+            </li>
+
+            <!-- Customer Routes here -->
+            <p
+              class="uppercase pt-5 text-sm mb-2.5 font-medium nav-link-header"
+            >
+              your customers
+            </p>
+
+            <li v-for="route in routes.customer" :key="route.id">
+              <router-link :to="route.route" class="flex mb-2.5"
+                ><img :src="route.icon" class="pt-0.5" alt="overview" />
+                <span class="pt-1 ml-2.5">{{ route.name }}</span>
+              </router-link>
+            </li>
+            <!--  tools Routes here -->
+            <p
+              class="uppercase pt-5 text-sm mb-2.5 font-medium nav-link-header"
+            >
+              tools
+            </p>
+
+            <li v-for="route in routes.tools" :key="route.id">
+              <router-link :to="route.route" class="flex mb-2.5"
+                ><img :src="route.icon" class="pt-0.5" alt="overview" />
+                <span class="pt-1 ml-2.5">{{ route.name }}</span>
               </router-link>
             </li>
           </ul>
@@ -132,37 +169,85 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      routes: [
-        "Dashboard",
-        "Orders",
-        "Send a gift",
-        "Users",
-        "Integrations",
-        "Settings",
-        "Logout",
-      ],
+      routes: {
+        business: [
+          {
+            name: "Orders",
+            route: "/Orders",
+            icon: require("@/assets/img/vectors/ic-invoice.svg"),
+            id: 1,
+          },
+          {
+            name: "Send a gift",
+            route: "/Gift",
+            icon: require("@/assets/img/vectors/ic-plans.svg"),
+            id: 2,
+          },
+        ],
+        customer: [
+          {
+            name: "Users",
+            route: "/Users",
+            icon: require("@/assets/img/vectors/ic-customers.svg"),
+            id: 4,
+          },
+        ],
+        tools: [
+          {
+            name: "Integrations",
+            route: "/Integrations",
+            icon: require("@/assets/img/vectors/ic-payment-pages.svg"),
+            id: 5,
+          },
+          {
+            name: "Settings",
+            route: "/invoices",
+            icon: require("@/assets/img/vectors/ic-settings.svg"),
+            id: 6,
+          },
+        ],
+      },
     };
+  },
+
+  props: {
+    step: {
+      type: Number,
+    },
   },
 };
 </script>
 
 <style scoped>
+
 main {
   background: #222840 0% 0% no-repeat padding-box;
 }
 
-#sidebar ul li {
-  list-style: none;
-}
-.primary-white {
-  color: #E3E4E7;
+.company-name {
+  color: #e7eaf3;
+  font-family: "Circular Std";
 }
 
-.border-bt {
-  border-bottom: 2px solid #babfc6;
+#sidebar ul li {
+  color: #e3e4e7;
+  font-weight: 300;
+  font-size: 0.875rem;
+  list-style: none;
 }
+
+hr {
+  border-top: 1px solid #babfc6;
+}
+
+.nav-link-header {
+  color: #d0f0fd;
+  font-family: "Circular Std";
+  letter-spacing: 0px;
+}
+
+
 </style>

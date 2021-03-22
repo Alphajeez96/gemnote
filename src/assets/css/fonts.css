@@ -1,0 +1,77 @@
+/* Circular Fonts Here */
+
+@font-face {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/circularstd-book.otf") format("woff");
+}
+
+
+/* Faricy Fonts Here */
+
+@font-face {
+    font-family: ' Faricy New';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/FaricyNew-Regular.otf") format("woff");
+}
+
+@font-face {
+    font-family: ' Faricy New';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/FaricyNew-Medium.otf") format("woff");
+}
+
+@font-face {
+    font-family: ' Faricy New';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/FaricyNew-Bold.otf") format("woff");
+}
+
+
+/* Hero New Fonts here */
+
+@font-face {
+    font-family: 'Hero New ';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Hero New Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hero New ';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Hero New Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hero New ';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Hero New Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hero New ';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/Hero New SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hero New ';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Hero New Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Hero New ';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/Hero New ExtraBold.woff') format('woff');
+}
