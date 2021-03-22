@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <div class="flex h-full">
+    <div class="flex h-screen">
       <div>
-      k
         <sideMenu />
       </div>
       <div style="flex-grow: 1">
