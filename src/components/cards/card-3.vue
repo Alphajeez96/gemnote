@@ -20,7 +20,6 @@
       <div>
         <giftChart />
       </div>
-      
     </div>
   </div>
 </template>

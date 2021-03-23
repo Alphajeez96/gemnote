@@ -1,15 +1,21 @@
 <template>
   <div id="app">
+
+    <!--Mobile toggleable sidebar here  -->
     <sideMenu class="lg:hidden md:hidden" v-if="IsVisible" />
+
+    <!-- screen Layout here -->
     <div class="flex">
       <div class="hidden md:block xl:block">
         <sideMenu />
       </div>
+      
       <div class="flex-grow">
-        <topNav @clicked="check" />
+        <topNav @clicked="displayMenu" />
         <index />
       </div>
     </div>
+
   </div>
 </template>
 
@@ -32,8 +38,7 @@ export default {
   },
 
   methods: {
-    check() {
-      console.log("I received it");
+    displayMenu() {
       this.IsVisible = !this.IsVisible;
     },
   },

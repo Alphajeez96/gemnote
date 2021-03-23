@@ -15,7 +15,7 @@
     </div>
 
     <!-- cars 3 here -->
-    <div class="mt-5 ">
+    <div class="mt-5">
       <card3 />
     </div>
   </div>

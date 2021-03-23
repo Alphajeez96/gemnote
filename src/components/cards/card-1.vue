@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between flex-wrap">
     <!-- Total orders here -->
-    <div class="card-holder pt-5 px-5 pb-6 mb-5  xl:mb-0">
+    <div class="card-holder pt-5 px-5 pb-6 mb-5 xl:mb-0">
       <p class="text-xs quad-gray font-light">
         Total number of orders this month
       </p>
@@ -155,7 +155,6 @@ export default {
   .card-holder {
     width: 100%;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {

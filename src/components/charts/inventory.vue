@@ -14,7 +14,6 @@
 <script>
 import doughnutChart from "../../plugins/charts/doughnutchart.js";
 export default {
-  
   components: {
     doughnutChart,
   },
@@ -30,6 +29,7 @@ export default {
         },
       ],
     },
+
     doughnutChartOptions: {
       responsive: true,
       legend: {
@@ -51,6 +51,7 @@ export default {
         backgroundColor: "#17BF62",
       },
     },
+    
   }),
 };
 </script>

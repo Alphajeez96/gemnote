@@ -6,7 +6,7 @@
       </p>
       <div class="flex justify-between flex-wrap md:flex-nowrap pt-3">
         <!-- Img 1 -->
-        <div class=" w-full lg:w-1/5 flex items-center justify-center">
+        <div class="w-full lg:w-1/5 flex items-center justify-center">
           <img src="@/assets/img/products/1.png" alt="" />
         </div>
 
@@ -25,8 +25,10 @@
           <img src="@/assets/img/products/4.png" alt="" />
         </div>
 
-        <!-- button here -->
-        <div class="mt-8 flex items-start w-full justify-center lg:w-1/5 lg:justify-end">
+        <!--Send Gift button here -->
+        <div
+          class="mt-8 flex items-start w-full justify-center lg:w-1/5 lg:justify-end"
+        >
           <button
             type="button"
             class="focus:outline-none seeall-btn flex items-center w-full justify-center font-medium py-2 md:px-1 px-5 font-13"
@@ -38,12 +40,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-@media (max-width: 575.98px) {
-
-
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {}
-</style>

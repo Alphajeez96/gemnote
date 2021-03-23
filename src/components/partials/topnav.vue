@@ -1,13 +1,21 @@
 <template>
   <nav class="relative">
-    <!-- Notification drop down -->
-    <notificationDropdown v-if="isNotificationOpen" @close="closeNotify" />
-    <profileTab v-if="isProfileTabOpen" />
+    <!-- Notification drop downs here -->
+    <div>
+      <notificationDropdown v-if="isNotificationOpen" @close="closeNotify" />
+      <profileTab v-if="isProfileTabOpen" />
+    </div>
 
     <div class="flex items-center py-2.5 lg:py-0 lg:px-6 px-3">
       <!-- Hamburger here -->
       <div class="self-center md:hidden lg:hidden mr-3">
-        <img src="../../assets/img/vectors/ic-nav.svg" @click="test" alt="Hamburger" />
+        <button type="button" class="focus:outline-none">
+          <img
+            src="../../assets/img/vectors/ic-nav.svg"
+            @click="openSideBar"
+            alt="Hamburger"
+          />
+        </button>
       </div>
 
       <!-- Route holder here -->
@@ -30,7 +38,7 @@
           />
         </div>
 
-<!-- Search bar for small screens here -->
+        <!-- Search bar for small screens here -->
         <div class="relative mx-2 lg:hidden">
           <img
             src="@/assets/img/vectors/search-icon.svg"
@@ -106,10 +114,9 @@ export default {
       }
     },
 
-    test(){
-      console.log("i was clicked")
-      this.$emit("clicked")
-    }
+    openSideBar() {
+      this.$emit("clicked");
+    },
   },
 };
 </script>
@@ -157,8 +164,5 @@ nav {
     top: 9px;
     left: 9px;
   }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
 }
 </style>

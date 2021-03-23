@@ -13,6 +13,7 @@ export default {
   },
 
   data: () => ({
+    
     chartdata: {
       labels: [
         "Jan",
@@ -28,6 +29,7 @@ export default {
         "Nov",
         "Dec",
       ],
+
       datasets: [
         {
           data: [65, 40, 55, 70, 50, 50, 50, 55, 70, 55, 40, 45, 8],
