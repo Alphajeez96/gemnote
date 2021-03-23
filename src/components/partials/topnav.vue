@@ -1,8 +1,9 @@
 <template>
-  <nav class="relative">
+  <nav class="relative hidden">
     <!-- Notification drop down -->
     <notificationDropdown v-if="isNotificationOpen" @close="closeNotify" />
     <profileTab v-if="isProfileTabOpen" />
+
     <div class="flex px-6">
       <div class="self-center">
         <h4 class="font-bold text-2xl route">{{ route }}</h4>
@@ -25,15 +26,10 @@
 
         <div class="border-left"></div>
 
-        <!--toggle menu here  -->
-        <div class="mx-6">
-          <toggle />
-        </div>
-
         <div class="border-left"></div>
 
         <!--notification menu here  -->
-        <div class="mx-6">
+        <div class="mx-6 hidden">
           <img
             src="@/assets/img/vectors/ic-notification.svg"
             alt="User"
@@ -59,7 +55,6 @@
 </template>
 
 <script>
-import toggle from "@/components/generic/toggle-switch";
 import notificationDropdown from "@/components/generic/notification-dropdown";
 import profileTab from "@/components/generic/profile-dropdown";
 export default {
@@ -70,7 +65,6 @@ export default {
   }),
 
   components: {
-    toggle,
     notificationDropdown,
     profileTab,
   },
@@ -124,4 +118,11 @@ nav {
   font-size: 0.875rem;
   opacity: 0.5;
 }
+
+@media (max-width: 575.98px) {
+.search-control{
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
 </style>

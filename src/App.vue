@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="dark dark:bg-gray-800 dark:text-gray-100">
+  <div id="app">
     <div class="flex">
-      <div>
+      <div class="hidden xl:block ">
         <sideMenu />
       </div>
       <div class="flex-grow">
@@ -38,6 +38,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Hero New ";
+
+}
+
+html, body{
   background: #f4f6f8;
 }
 

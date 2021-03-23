@@ -1,22 +1,23 @@
 <template>
   <div class="pt-5 pb-7 px-6">
-    <h4 class="font-bold text-2xl route">Welcome to Gemnote, Ashley!</h4>
+    <h4 class="font-bold text-xl lg:text-2xl route">
+      Welcome to Gemnote, Ashley!
+    </h4>
 
     <!-- cars 1 here -->
-    <div class="mt-6">
+    <div class="mt-5">
       <card1 />
     </div>
 
     <!-- cars 2 here -->
-    <div class="mt-6">
+    <div class="mt-5">
       <card2 />
     </div>
 
     <!-- cars 3 here -->
-    <div class="mt-6">
+    <div class="mt-5 hidden">
       <card3 />
     </div>
-
   </div>
 </template>
 
