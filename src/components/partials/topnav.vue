@@ -45,7 +45,7 @@
         <div class="border-left mr-6"></div>
 
         <!--profile menu here  -->
-        <div class="">
+        <div>
           <img
             src="@/assets/img/vectors/ic-profile-placeholder.svg"
             alt="User"
@@ -63,35 +63,17 @@ import toggle from "@/components/generic/toggle-switch";
 import notificationDropdown from "@/components/generic/notification-dropdown";
 import profileTab from "@/components/generic/profile-dropdown";
 export default {
-  data() {
-    return {
-      route: "Dashboard",
-      isNotificationOpen: false,
-      isProfileTabOpen: false,
-    };
-  },
+  data: () => ({
+    route: "Dashboard",
+    isNotificationOpen: false,
+    isProfileTabOpen: false,
+  }),
 
   components: {
     toggle,
     notificationDropdown,
     profileTab,
   },
-
-  //   watch: {
-  //     $route() {
-  //       if (this.$router.history.current.fullPath.includes("/Gift")) {
-  //         this.route = "Send a Gift";
-  //       }
-  //       console.log("test:::", this.$router.history.current);
-  //     },
-  //   },
-
-  //   mounted() {
-  //     if (this.$router.history.current.fullPath.includes("/Gift")) {
-  //       this.route = "Send a Gift";
-  //     }
-  //     console.log("test:::", this.$router.history.current);
-  //   },
 
   methods: {
     closeNotify() {

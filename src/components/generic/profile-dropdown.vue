@@ -2,17 +2,12 @@
   <div>
     <div class="holder absolute px-3">
       <ul>
-        <li class="font-13 primary-gray py-3 border-b font-light tab-link">
-          <router-link to>Settings</router-link>
-        </li>
-        <li class="font-13 primary-gray py-3 border-b font-light tab-link">
-          <router-link to>Documentation</router-link>
-        </li>
-        <li class="font-13 primary-gray py-3 border-b font-light tab-link">
-          <router-link to>Get Started</router-link>
-        </li>
-        <li class="font-13 primary-gray py-3 font-light tab-link">
-          <router-link to>Logout</router-link>
+        <li
+          class="font-13 primary-gray py-3 border-b font-light tab-link"
+          v-for="(link, index) in links"
+          :key="index"
+        >
+          <router-link to>{{ link }}</router-link>
         </li>
       </ul>
     </div>
@@ -20,7 +15,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    links: ["Settings", "Documentation", "Get Started", "Logout"],
+  }),
+};
 </script>
 
 <style scoped>

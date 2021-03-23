@@ -8,30 +8,6 @@
 }
 
 
-/* Faricy Fonts Here */
-
-@font-face {
-    font-family: ' Faricy New';
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/FaricyNew-Regular.otf") format("woff");
-}
-
-@font-face {
-    font-family: ' Faricy New';
-    font-style: normal;
-    font-weight: 500;
-    src: url("../fonts/FaricyNew-Medium.otf") format("woff");
-}
-
-@font-face {
-    font-family: ' Faricy New';
-    font-style: normal;
-    font-weight: 700;
-    src: url("../fonts/FaricyNew-Bold.otf") format("woff");
-}
-
-
 /* Hero New Fonts here */
 
 @font-face {

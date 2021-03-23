@@ -25,14 +25,14 @@
           <img src="@/assets/img/products/4.png" alt="" />
         </div>
 
-            <!-- button here -->
+        <!-- button here -->
         <div class="mt-8 flex items-start">
-      <button
-          type="button"
-          class="focus:outline-none seeall-btn flex items-end font-medium py-2 px-5 font-13"
-        >
-          <span>Send a gift</span>
-        </button>
+          <button
+            type="button"
+            class="focus:outline-none seeall-btn flex items-end font-medium py-2 px-5 font-13"
+          >
+            <span>Send a gift</span>
+          </button>
         </div>
       </div>
     </div>

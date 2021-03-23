@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5 px-6">
+  <div class="pt-5 pb-7 px-6">
     <h4 class="font-bold text-2xl route">Welcome to Gemnote, Ashley!</h4>
 
     <!-- cars 1 here -->
@@ -7,15 +7,16 @@
       <card1 />
     </div>
 
-    <!-- cars 1 here -->
+    <!-- cars 2 here -->
     <div class="mt-6">
       <card2 />
     </div>
 
-    <!-- cars 1 here -->
+    <!-- cars 3 here -->
     <div class="mt-6">
       <card3 />
     </div>
+
   </div>
 </template>
 
@@ -31,7 +32,3 @@ export default {
   },
 };
 </script>
-
-
-<style scoped>
-</style>

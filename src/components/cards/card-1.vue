@@ -47,7 +47,7 @@
       <div class="flex justify-end mt-3">
         <button
           type="button"
-          class="focus:outline-none seeall-btn flex items-center font-medium px-3.5 py-1.5 font-13 "
+          class="focus:outline-none seeall-btn flex items-center font-medium px-3.5 py-1.5 font-13"
         >
           <span>View Orders</span>
         </button>
@@ -101,18 +101,20 @@
       <div class="flex justify-end mt-3">
         <button
           type="button"
-          class="focus:outline-none seeall-btn flex items-center font-medium py-1.5 px-3.5 font-13 "
+          class="focus:outline-none seeall-btn flex items-center font-medium py-1.5 px-3.5 font-13"
         >
           <span>View Shipments</span>
         </button>
       </div>
     </div>
 
-    <!-- Total orders here -->
+    <!-- Inventory here -->
     <div class="card-holder pt-5 px-5 pb-6">
       <div class="flex justify-between">
         <!-- graph here -->
-        <div class="graph"></div>
+        <div>
+          <Inventory />
+        </div>
 
         <!-- Texts here -->
         <div class="ml-auto text-right">
@@ -132,4 +134,13 @@
     </div>
   </div>
 </template>
+
+<script>
+import Inventory from "../charts/inventory";
+export default {
+  components: {
+    Inventory,
+  },
+};
+</script>
 

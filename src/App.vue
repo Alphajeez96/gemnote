@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="dark dark:bg-gray-800 dark:text-gray-100">
     <div class="flex">
       <div>
         <sideMenu />
       </div>
-      <div style="flex-grow: 1">
+      <div class="flex-grow">
         <topNav />
         <index />
       </div>
@@ -14,7 +14,7 @@
 
 <script>
 import index from "./components/index";
-import sideMenu from "./components/partials/sidemenu-2";
+import sideMenu from "./components/partials/sidemenu";
 import topNav from "./components/partials/topnav";
 
 export default {
@@ -28,30 +28,36 @@ export default {
 </script>
 
 <style>
+:root {
+  --primary-gray: #646a86;
+  --sec-gray: #74787c;
+  --quad-gray: #7c8191;
+  --sec-black: #1b1c1d;
+}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Hero New ";
   background: #f4f6f8;
 }
-.primary-blue {
-  color: #2843b4;
-}
-.quad-gray {
-  color: #7c8191;
-}
+
 .primary-gray {
-  color: #646a86;
+  color: var(--primary-gray);
 }
 
 .sec-gray {
-  color: #74787c;
+  color: var(--sec-gray);
 }
+
+.quad-gray {
+  color: var(--quad-gray);
+}
+.sec-black {
+  color: var(--sec-black);
+}
+
 .font-13 {
   font-size: 0.813rem;
-}
-.sec-blavk {
-  color: #1b1c1d;
 }
 
 .route {
@@ -76,7 +82,6 @@ export default {
 .increase-svg {
   fill: #24b47a;
 }
-
 .decrease-bg {
   background: #f1d6d6 0% 0% no-repeat padding-box;
   border-radius: 3px;
@@ -87,7 +92,6 @@ export default {
 .decrease-svg {
   fill: #b52424;
 }
-
 .seeall-btn {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 2px rgb(63 63 68 / 30%);
@@ -95,12 +99,5 @@ export default {
   border-radius: 3px;
   font-size: 0.813rem;
   color: #74787c;
-}
-
-.graph {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  background: #74787c;
 }
 </style>
