@@ -104,4 +104,15 @@ html, body{
   font-size: 0.813rem;
   color: #74787c;
 }
+
+@media (max-width: 575.98px) {
+
+canvas#bar-chart{
+width: 343px !important;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+
 </style>
