@@ -17,7 +17,7 @@
 <script>
 export default {
   data: () => ({
-    links: ["Settings", "Documentation", "Get Started", "Logout"],
+    links: ["Settings", "Notifications", "Documentation", "Get Started", "Logout"],
   }),
 };
 </script>

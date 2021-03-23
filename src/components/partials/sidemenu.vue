@@ -1,7 +1,7 @@
 <template>
-  <main class="h-full">
+  <main class="h-full absolute lg:static">
     <transition name="fade">
-      <nav id="sidebar" class="w-60 h-full">
+      <nav id="sidebar" class="w-48 lg:w-60 h-full">
         <div class="flex items-center px-6 h-4 py-9">
           <!--Company Logo here -->
           <div class="self-center">
@@ -240,5 +240,19 @@ hr {
   color: #d0f0fd;
   font-family: "Circular Std";
   letter-spacing: 0px;
+}
+
+@media (max-width: 575.98px) {
+  main {
+    top: 57px;
+    transition: 3s;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main {
+    top: 57px;
+    transition: 3s;
+  }
 }
 </style>

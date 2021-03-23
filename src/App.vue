@@ -1,11 +1,12 @@
 <template>
   <div id="app">
+    <sideMenu class="lg:hidden" v-if="IsVisible" />
     <div class="flex">
-      <div class="hidden xl:block ">
+      <div class="hidden xl:block">
         <sideMenu />
       </div>
       <div class="flex-grow">
-        <topNav />
+        <topNav @clicked="check" />
         <index />
       </div>
     </div>
@@ -19,10 +20,22 @@ import topNav from "./components/partials/topnav";
 
 export default {
   name: "App",
+
+  data: () => ({
+    IsVisible: false,
+  }),
+
   components: {
     index,
     sideMenu,
     topNav,
+  },
+
+  methods: {
+    check() {
+      console.log("I received it");
+      this.IsVisible = !this.IsVisible;
+    },
   },
 };
 </script>
@@ -38,10 +51,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Hero New ";
-
 }
 
-html, body{
+html,
+body {
   background: #f4f6f8;
 }
 
@@ -106,13 +119,14 @@ html, body{
 }
 
 @media (max-width: 575.98px) {
-
-canvas#bar-chart{
-width: 343px !important;
+  canvas#bar-chart {
+    width: 343px !important;
+  }
 }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  canvas#bar-chart {
+    width: 343px !important;
+  }
 }
-
-@media (min-width: 576px) and (max-width: 767.98px) {}
-
-
 </style>

@@ -5,10 +5,9 @@
     <profileTab v-if="isProfileTabOpen" />
 
     <div class="flex items-center py-2.5 lg:py-0 lg:px-6 px-3">
-
-    <!-- Hamburger here -->
+      <!-- Hamburger here -->
       <div class="self-center lg:hidden mr-3">
-        <img src="../../assets/img/vectors/ic-nav.svg" alt="Hamburger" />
+        <img src="../../assets/img/vectors/ic-nav.svg" @click="test" alt="Hamburger" />
       </div>
 
       <!-- Route holder here -->
@@ -31,7 +30,7 @@
           />
         </div>
 
-           <div class="relative mx-2 lg:hidden">
+        <div class="relative mx-2 lg:hidden">
           <img
             src="@/assets/img/vectors/search-icon.svg"
             class="absolute search"
@@ -109,6 +108,11 @@ export default {
         this.isNotificationOpen = false;
       }
     },
+
+    test(){
+      console.log("i was clicked")
+      this.$emit("clicked")
+    }
   },
 };
 </script>
