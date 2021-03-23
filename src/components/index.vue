@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5 pb-7 px-6">
+  <div class="pt-5 pb-7 px-3 lg:px-6">
     <h4 class="font-bold text-xl lg:text-2xl route">
       Welcome to Gemnote, Ashley!
     </h4>
@@ -15,7 +15,7 @@
     </div>
 
     <!-- cars 3 here -->
-    <div class="mt-5 hidden">
+    <div class="mt-5 ">
       <card3 />
     </div>
   </div>

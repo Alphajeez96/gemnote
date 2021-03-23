@@ -1,17 +1,24 @@
 <template>
-  <nav class="relative hidden">
+  <nav class="relative">
     <!-- Notification drop down -->
     <notificationDropdown v-if="isNotificationOpen" @close="closeNotify" />
     <profileTab v-if="isProfileTabOpen" />
 
-    <div class="flex px-6">
+    <div class="flex items-center py-2.5 lg:py-0 lg:px-6 px-3">
+
+    <!-- Hamburger here -->
+      <div class="self-center lg:hidden mr-3">
+        <img src="../../assets/img/vectors/ic-nav.svg" alt="Hamburger" />
+      </div>
+
+      <!-- Route holder here -->
       <div class="self-center">
-        <h4 class="font-bold text-2xl route">{{ route }}</h4>
+        <h4 class="font-bold text-xl lg:text-2xl route">{{ route }}</h4>
       </div>
 
       <div class="ml-auto flex self-center items-center relative">
         <!-- search bar here -->
-        <div class="relative mx-6">
+        <div class="relative mx-6 hidden">
           <img
             src="@/assets/img/vectors/search-icon.svg"
             class="absolute search"
@@ -19,26 +26,41 @@
           />
           <input
             type="text"
-            class="focus:outline-none search-control px-10"
+            class="focus:outline-none search-control px-8 lg:px-10"
             placeholder="Search gifts, customer etc"
           />
         </div>
 
-        <div class="border-left"></div>
+           <div class="relative mx-2 lg:hidden">
+          <img
+            src="@/assets/img/vectors/search-icon.svg"
+            class="absolute search"
+            alt="search"
+          />
+          <input
+            type="text"
+            class="focus:outline-none text-xs search-control px-7"
+            placeholder="Search "
+          />
+        </div>
 
-        <div class="border-left"></div>
+        <div class="border-left hidden lg:block"></div>
+
+        <div class="border-left hidden lg:block"></div>
 
         <!--notification menu here  -->
         <div class="mx-6 hidden">
           <img
             src="@/assets/img/vectors/ic-notification.svg"
             alt="User"
+            height="35"
+            width="35"
             class="cursor-pointer"
             @click="openNotify"
           />
         </div>
 
-        <div class="border-left mr-6"></div>
+        <div class="border-left mr-6 hidden lg:block"></div>
 
         <!--profile menu here  -->
         <div>
@@ -120,9 +142,22 @@ nav {
 }
 
 @media (max-width: 575.98px) {
-.search-control{
-}
+  nav {
+    height: auto;
+  }
+  .search-control {
+    width: 95px;
+    height: 32px;
+  }
+  .search-control::placeholder {
+    font-size: 0.75rem;
+  }
+  .search {
+    top: 9px;
+    left: 9px;
+  }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {}
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
 </style>
