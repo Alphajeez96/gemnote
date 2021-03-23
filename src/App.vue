@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <sideMenu class="lg:hidden" v-if="IsVisible" />
+    <sideMenu class="lg:hidden md:hidden" v-if="IsVisible" />
     <div class="flex">
-      <div class="hidden xl:block">
+      <div class="hidden md:block xl:block">
         <sideMenu />
       </div>
       <div class="flex-grow">

@@ -17,7 +17,13 @@
 <script>
 export default {
   data: () => ({
-    links: ["Settings", "Notifications", "Documentation", "Get Started", "Logout"],
+    links: [
+      "Settings",
+      "Notifications",
+      "Documentation",
+      "Get Started",
+      "Logout",
+    ],
   }),
 };
 </script>
@@ -40,5 +46,17 @@ export default {
 }
 .border-b {
   border-bottom: 1px solid #e7eaed;
+}
+
+@media (max-width: 575.98px) {
+  .holder {
+    top: 55px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main {
+    top: 55px;
+  }
 }
 </style>

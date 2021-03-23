@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between flex-wrap">
     <!-- Total orders here -->
-    <div class="card-holder pt-5 px-5 pb-6 mb-5 lg:mb-0">
+    <div class="card-holder pt-5 px-5 pb-6 mb-5  xl:mb-0">
       <p class="text-xs quad-gray font-light">
         Total number of orders this month
       </p>
@@ -55,7 +55,7 @@
     </div>
 
     <!-- Shipments here -->
-    <div class="card-holder pt-5 px-5 pb-6 mb-5 lg:mb-0">
+    <div class="card-holder pt-5 px-5 pb-6 mb-5 xl:mb-0">
       <p class="text-xs quad-gray font-light">
         Average number of shipments/month
       </p>
@@ -109,7 +109,7 @@
     </div>
 
     <!-- Inventory here -->
-    <div class="card-holder pt-5 px-5 pb-6 mb-5 lg:mb-0">
+    <div class="card-holder pt-5 px-5 pb-6">
       <div class="flex justify-between">
         <!-- graph here -->
         <div>
@@ -152,7 +152,6 @@ export default {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-
   .card-holder {
     width: 100%;
   }
@@ -161,11 +160,14 @@ export default {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .card-holder {
-    width: 32%;
+    width: 100%;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .card-holder {
+    width: 100%;
+  }
 }
 </style>
 

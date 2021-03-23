@@ -6,7 +6,7 @@
 
     <div class="flex items-center py-2.5 lg:py-0 lg:px-6 px-3">
       <!-- Hamburger here -->
-      <div class="self-center lg:hidden mr-3">
+      <div class="self-center md:hidden lg:hidden mr-3">
         <img src="../../assets/img/vectors/ic-nav.svg" @click="test" alt="Hamburger" />
       </div>
 
@@ -17,7 +17,7 @@
 
       <div class="ml-auto flex self-center items-center relative">
         <!-- search bar here -->
-        <div class="relative mx-6 hidden">
+        <div class="relative mx-6 hidden lg:block">
           <img
             src="@/assets/img/vectors/search-icon.svg"
             class="absolute search"
@@ -30,6 +30,7 @@
           />
         </div>
 
+<!-- Search bar for small screens here -->
         <div class="relative mx-2 lg:hidden">
           <img
             src="@/assets/img/vectors/search-icon.svg"
@@ -45,15 +46,11 @@
 
         <div class="border-left hidden lg:block"></div>
 
-        <div class="border-left hidden lg:block"></div>
-
         <!--notification menu here  -->
-        <div class="mx-6 hidden">
+        <div class="mx-6 hidden lg:block">
           <img
             src="@/assets/img/vectors/ic-notification.svg"
             alt="User"
-            height="35"
-            width="35"
             class="cursor-pointer"
             @click="openNotify"
           />

@@ -1,5 +1,5 @@
 <template>
-  <main class="h-full absolute lg:static">
+  <main class="h-full absolute md:static lg:static">
     <transition name="fade">
       <nav id="sidebar" class="w-48 lg:w-60 h-full">
         <div class="flex items-center px-6 h-4 py-9">
