@@ -2,7 +2,7 @@
   <main class="h-full absolute md:static lg:static">
     <transition name="fade">
       <nav id="sidebar" class="w-48 lg:w-60 h-full">
-        <div class="flex items-center px-6 h-4 py-9">
+        <div class="flex items-center mx-12 h-4 py-14">
           <!--Company Logo here -->
           <div class="self-center">
             <svg
@@ -107,10 +107,14 @@
           </div>
         </div>
 
-        <hr />
+        <div class="mx-12 pt-4   border-b pb-9">
+<p class="name text-sm">Ashley Wong</p>
+        </div>
 
+
+  
         <!--Routes here -->
-        <div class="px-6 py-5">
+        <div class="mx-6 py-5">
           <ul class="flex list-decimal flex-col">
             <li>
               <router-link to="/" class="flex mb-1"
@@ -217,20 +221,23 @@ export default {
 
 <style scoped>
 main {
-  background: #222840 0% 0% no-repeat padding-box;
+  background: #24292C 0% 0% no-repeat padding-box;
 }
 
-.company-name {
-  color: #e7eaf3;
-  font-family: "Circular Std";
-}
 
 #sidebar ul li {
-  color: #e3e4e7;
+  color: #E5E5E5;
   font-weight: 300;
   font-size: 0.875rem;
   list-style: none;
 }
+
+.name{
+  color: #E5E5E5;
+  font-weight: 300;
+}
+
+
 
 hr {
   border-top: 1px solid #babfc6;
