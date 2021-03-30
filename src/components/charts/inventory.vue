@@ -51,7 +51,6 @@ export default {
         backgroundColor: "#17BF62",
       },
     },
-    
   }),
 };
 </script>

@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <!--Mobile toggleable sidebar here  -->
-    <sideMenu class="lg:hidden md:hidden" v-if="IsVisible" />
+
 
     <!-- screen Layout here -->
     <div class="flex">
-      <div class="hidden md:block xl:block">
+      <div class=" md:block xl:block">
         <sideMenu />
       </div>
 
@@ -32,11 +31,6 @@ export default {
     sideMenu,
   },
 
-  methods: {
-    displayMenu() {
-      this.IsVisible = !this.IsVisible;
-    },
-  },
 };
 </script>
 

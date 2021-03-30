@@ -1,5 +1,5 @@
 <template>
-  <div class="py-10 mx-6 lg:mx-24">
+  <div class="py-10 mx-6 xl:mx-24">
     <h4 class="font-bold pb-2 text-xl lg:text-2xl route">
       Welcome to Gemnote, Ashley!
     </h4>

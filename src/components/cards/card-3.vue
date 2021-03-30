@@ -9,7 +9,7 @@
         <div class="ml-auto self-center">
           <button
             type="button"
-            class="focus:outline-none bg-transparent font-13 py-2.5 px-7 font-medium primary-btn"
+            class="focus:outline-none bg-transparent font-13 py-2.5 px-4 lg:px-7 font-medium primary-btn"
           >
             Download report
           </button>

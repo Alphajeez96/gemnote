@@ -1,8 +1,8 @@
 <template>
-  <main class="h-full absolute md:static lg:static">
+  <main class="h-full">
     <transition name="fade">
-      <nav id="sidebar" class="w-48 lg:w-60 h-full">
-        <div class="flex items-center mx-12 h-4 py-14">
+      <nav id="sidebar" class="w-48 md:w-52 xl:w-60 h-screen">
+        <div class="flex items-center mx-3 md:mx-8 lg:mx-12 h-4 py-14">
           <!--Company Logo here -->
           <div class="self-center">
             <svg
@@ -107,12 +107,14 @@
           </div>
         </div>
 
-        <div class="mx-12 pt-5 border_b pb-8 mb-3 primary-white">
+        <div
+          class="mx-3 md:mx-8 lg:mx-12 pt-5 border_b pb-8 mb-3 primary-white"
+        >
           <p class="name text-sm font-light">Ashley Wong</p>
         </div>
 
         <!--Routes here -->
-        <div class="mx-12 py-5">
+        <div class="mx-3 md:mx-8 lg:mx-12 py-5">
           <ul class="flex list-decimal flex-col">
             <li
               v-for="(route, index) in routes"
@@ -161,19 +163,5 @@ hr {
 
 .border_b {
   border-bottom: 2px solid #56595b;
-}
-
-@media (max-width: 575.98px) {
-  main {
-    top: 57px;
-    transition: 3s;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  main {
-    top: 57px;
-    transition: 3s;
-  }
 }
 </style>
