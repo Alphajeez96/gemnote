@@ -55,7 +55,7 @@ export default {
             },
             ticks: {
               fontSize: 12,
-              fontColor: " #878B9A",
+              fontColor: " #25282A",
             },
           },
         ],
@@ -68,7 +68,7 @@ export default {
             },
             ticks: {
               fontSize: 12,
-              fontColor: " #878B9A",
+              fontColor: " #25282A",
             },
           },
         ],

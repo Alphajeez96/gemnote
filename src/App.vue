@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <!--Mobile toggleable sidebar here  -->
     <sideMenu class="lg:hidden md:hidden" v-if="IsVisible" />
 
@@ -9,20 +8,17 @@
       <div class="hidden md:block xl:block">
         <sideMenu />
       </div>
-      
+
       <div class="flex-grow">
-        <topNav @clicked="displayMenu" />
         <index />
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
 import index from "./components/index";
 import sideMenu from "./components/partials/sidemenu";
-import topNav from "./components/partials/topnav";
 
 export default {
   name: "App",
@@ -34,7 +30,6 @@ export default {
   components: {
     index,
     sideMenu,
-    topNav,
   },
 
   methods: {
@@ -47,10 +42,8 @@ export default {
 
 <style>
 :root {
-  --primary-gray: #646a86;
-  --sec-gray: #74787c;
-  --quad-gray: #7c8191;
-  --sec-black: #1b1c1d;
+  --primary-black: #25282a;
+  --sec-black: #24292c;
 }
 #app {
   -webkit-font-smoothing: antialiased;
@@ -60,67 +53,35 @@ export default {
 
 html,
 body {
-  background: #f4f6f8;
+  background: #ffffff;
 }
 
-.primary-gray {
-  color: var(--primary-gray);
+.primary-black {
+  color: var(--primary-black);
 }
 
-.sec-gray {
-  color: var(--sec-gray);
-}
-
-.quad-gray {
-  color: var(--quad-gray);
-}
 .sec-black {
   color: var(--sec-black);
 }
-
 .font-13 {
   font-size: 0.813rem;
 }
-
-.route {
-  color: #464646;
-}
-
 .card-holder {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #e7eaed;
+  background: inherit;
+  border: 2px solid #e3e3e3;
   border-radius: 3px 3px 0px 0px;
-  width: 346px;
-}
-.card-holder.full {
-  width: 100%;
-}
-.increase-bg {
-  background: #24b47a26 0% 0% no-repeat padding-box;
-  border-radius: 3px;
-  height: 18px;
-  color: #24b47a;
-}
-.increase-svg {
-  fill: #24b47a;
-}
-.decrease-bg {
-  background: #f1d6d6 0% 0% no-repeat padding-box;
-  border-radius: 3px;
-  height: 18px;
-  color: #b52424;
 }
 
-.decrease-svg {
-  fill: #b52424;
+.primary-btn {
+  border: 2px #919495;
+  color: #323639;
+  border-style: solid solid double solid;
 }
-.seeall-btn {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 2px rgb(63 63 68 / 30%);
-  border: 1px solid #e7eaed;
+
+.primary-btn:hover {
+  background: #919495;
   border-radius: 3px;
-  font-size: 0.813rem;
-  color: #74787c;
+  color: #fff;
 }
 
 @media (max-width: 575.98px) {

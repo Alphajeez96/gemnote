@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card-holder full p-5">
-      <p class="text-sm quad-gray font-semibold">
+      <p class="text-sm primary-black  font-semibold">
         Trending gifts in your store
       </p>
       <div class="flex justify-between flex-wrap md:flex-nowrap pt-3">
@@ -29,12 +29,13 @@
         <div
           class="mt-8 flex items-start w-full justify-center lg:w-1/5 lg:justify-end"
         >
-          <button
-            type="button"
-            class="focus:outline-none seeall-btn flex items-center w-full justify-center font-medium py-2 md:px-1 px-5 font-13"
-          >
-            <span>Send a gift</span>
-          </button>
+
+           <button
+                type="button"
+                class="focus:outline-none bg-transparent font-13 py-2.5 px-7 font-medium primary-btn w-full lg:w-36"
+              >
+                Send a gift
+              </button>
         </div>
       </div>
     </div>

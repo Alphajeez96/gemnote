@@ -1,135 +1,67 @@
 <template>
-  <div class="flex justify-between flex-wrap">
-    <!-- Total orders here -->
-    <div class="card-holder pt-5 px-5 pb-6 mb-5 xl:mb-0">
-      <p class="text-xs quad-gray font-light">
-        Total number of orders this month
-      </p>
-      <h4 class="sec-gray font-bold text-2xl pt-1">2,736</h4>
-      <button
-        class="flex items-center mt-1 cursor-auto increase-bg focus:outline-none px-2 text-xs"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="increase-svg"
-          width="9"
-          height="9"
-          viewBox="0 0 9 9"
-        >
-          <defs>
-            <clipPath id="zlnta">
-              <path
-                d="M2.875.667h5.408v5.408H7.217V2.5L.925 8.792l-.767-.767L6.45 1.733H2.875z"
-              />
-            </clipPath>
-            <clipPath id="zlntb">
-              <path d="M-297 828h1366V-196H-297z" />
-            </clipPath>
-          </defs>
-          <g>
-            <g>
-              <g />
-              <g clip-path="url(#zlnta)">
-                <g />
-                <g clip-path="url(#zlntb)">
-                  <path
-                    fill="current"
-                    d="M-4.842-4.333h18.125v18.125H-4.842z"
-                  />
-                </g>
-              </g>
-            </g>
-          </g>
-        </svg>
-        <span class="ml-2">3.5%</span>
-      </button>
+  <div class="flex flex-wrap lg:flex-nowrap">
+    <!-- card 1 here -->
+    <div class="card-holder p-5 w-full">
+      <div class="flex">
+        <!-- Total number here -->
+        <div class="w-1/2">
+          <h5 class="text-base primary-black font-medium">
+            Total number of <br> orders this month
+          </h5>
+          <h4 class="text-4xl sec-black font-semibold pt-5">2,736</h4>
+        </div>
 
-      <div class="flex justify-end mt-3">
-        <button
-          type="button"
-          class="focus:outline-none seeall-btn flex items-center font-medium px-3.5 py-1.5 font-13"
-        >
-          <span>View Orders</span>
-        </button>
+        <!-- divider here -->
+        <div class="divider pr-8"></div>
+
+        <!-- Average number here -->
+        <div class="w-1/2">
+          <h5 class="text-base primary-black font-medium">
+            Average number of shipments/month
+          </h5>
+
+          <div class="flex items-center">
+            <h4 class="text-4xl sec-black font-semibold pt-5">364</h4>
+
+            <div class="ml-auto self-end">
+              <button
+                type="button"
+                class="focus:outline-none bg-transparent font-13 py-2 px-3.5 font-medium primary-btn"
+              >
+                View Orders
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Shipments here -->
-    <div class="card-holder pt-5 px-5 pb-6 mb-5 xl:mb-0">
-      <p class="text-xs quad-gray font-light">
-        Average number of shipments/month
-      </p>
-      <h4 class="sec-gray font-bold text-2xl pt-1">364</h4>
-      <button
-        class="flex items-center mt-1 cursor-auto decrease-bg focus:outline-none px-2 text-xs"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="decrease-svg"
-          width="9"
-          height="9"
-          viewBox="0 0 9 9"
-        >
-          <defs>
-            <clipPath id="zlnta">
-              <path
-                d="M2.875.667h5.408v5.408H7.217V2.5L.925 8.792l-.767-.767L6.45 1.733H2.875z"
-              />
-            </clipPath>
-            <clipPath id="zlntb">
-              <path d="M-297 828h1366V-196H-297z" />
-            </clipPath>
-          </defs>
-          <g>
-            <g>
-              <g />
-              <g clip-path="url(#zlnta)">
-                <g />
-                <g clip-path="url(#zlntb)">
-                  <path
-                    fill="current"
-                    d="M-4.842-4.333h18.125v18.125H-4.842z"
-                  />
-                </g>
-              </g>
-            </g>
-          </g>
-        </svg>
-        <span class="ml-2">3.5%</span>
-      </button>
-
-      <div class="flex justify-end mt-3">
-        <button
-          type="button"
-          class="focus:outline-none seeall-btn flex items-center font-medium py-1.5 px-3.5 font-13"
-        >
-          <span>View Shipments</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Inventory here -->
-    <div class="card-holder pt-5 px-5 pb-6">
+    <!-- card 2 here -->
+    <div class="card-holder p-5 w-full lg:ml-6 mt-7 lg:mt-0">
       <div class="flex justify-between">
-        <!-- graph here -->
+        <!-- chart here -->
+
         <div>
-          <Inventory />
+          <inventory />
         </div>
 
-        <!-- Texts here -->
-        <div class="ml-auto text-right">
-          <p class="text-xs quad-gray font-light">Current Inventory</p>
-          <h4 class="sec-gray font-bold text-2xl pt-1">400</h4>
-        </div>
-      </div>
+        <div class="w-3/5">
+          <!-- current Invemtory -->
+          <h5 class="text-base primary-black font-medium">Current Inventory</h5>
 
-      <div class="flex justify-end mt-8">
-        <button
-          type="button"
-          class="focus:outline-none seeall-btn flex items-center font-medium py-1.5 px-3.5 font-13"
-        >
-          <span>Manage Inventory</span>
-        </button>
+          <div class="flex items-center">
+            <h4 class="text-4xl sec-black font-semibold pt-5">400</h4>
+
+            <div class="ml-auto self-end">
+              <button
+                type="button"
+                class="focus:outline-none bg-transparent font-13 py-2.5 px-2 font-medium primary-btn"
+              >
+                Manage Inventory
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -145,6 +77,10 @@ export default {
 </script>
 
 <style scoped>
+.divider {
+  border-left: 2px solid #e5e5e5;
+}
+
 @media (max-width: 575.98px) {
   .card-holder {
     width: 100%;

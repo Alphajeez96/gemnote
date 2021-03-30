@@ -107,64 +107,20 @@
           </div>
         </div>
 
-        <div class="mx-12 pt-4   border-b pb-9">
-<p class="name text-sm">Ashley Wong</p>
+        <div class="mx-12 pt-5 border_b pb-8 mb-3 primary-white">
+          <p class="name text-sm font-light">Ashley Wong</p>
         </div>
 
-
-  
         <!--Routes here -->
-        <div class="mx-6 py-5">
+        <div class="mx-12 py-5">
           <ul class="flex list-decimal flex-col">
-            <li>
-              <router-link to="/" class="flex mb-1"
-                ><img
-                  src="@/assets/img/vectors/ic-overview.svg"
-                  alt="overview"
-                />
-                <span class="pt-1 ml-2.5">Overview</span>
-              </router-link>
-            </li>
-
-            <!-- Business Routes here -->
-            <p
-              class="uppercase pt-7 text-sm mb-2.5 font-medium nav-link-header"
+            <li
+              v-for="(route, index) in routes"
+              :key="index"
+              class="py-2.5 text-sm font-light list-none primary-white"
             >
-              your business
-            </p>
-
-            <li v-for="(route, index) in routes.business" :key="index">
-              <router-link :to="route.route" class="flex mb-2.5"
-                ><img :src="route.icon" class="pt-0.5" alt="overview" />
-                <span class="pt-1 ml-2.5">{{ route.name }}</span>
-              </router-link>
-            </li>
-
-            <!-- Customer Routes here -->
-            <p
-              class="uppercase pt-5 text-sm mb-2.5 font-medium nav-link-header"
-            >
-              your customers
-            </p>
-
-            <li v-for="route in routes.customer" :key="route.id">
-              <router-link :to="route.route" class="flex mb-2.5"
-                ><img :src="route.icon" class="pt-0.5" alt="overview" />
-                <span class="pt-1 ml-2.5">{{ route.name }}</span>
-              </router-link>
-            </li>
-
-            <!--  tools Routes here -->
-            <p
-              class="uppercase pt-5 text-sm mb-2.5 font-medium nav-link-header"
-            >
-              tools
-            </p>
-
-            <li v-for="route in routes.tools" :key="route.id">
-              <router-link :to="route.route" class="flex mb-2.5"
-                ><img :src="route.icon" class="pt-0.5" alt="overview" />
-                <span class="pt-1 ml-2.5">{{ route.name }}</span>
+              <router-link to="/" class="flex mb-1">
+                {{ route }}
               </router-link>
             </li>
           </ul>
@@ -177,76 +133,34 @@
 <script>
 export default {
   data: () => ({
-    routes: {
-      business: [
-        {
-          name: "Orders",
-          route: "/Orders",
-          icon: require("@/assets/img/vectors/ic-invoice.svg"),
-          id: 1,
-        },
-        {
-          name: "Send a gift",
-          route: "/Gift",
-          icon: require("@/assets/img/vectors/ic-plans.svg"),
-          id: 2,
-        },
-      ],
-      customer: [
-        {
-          name: "Users",
-          route: "/Users",
-          icon: require("@/assets/img/vectors/ic-customers.svg"),
-          id: 3,
-        },
-      ],
-      tools: [
-        {
-          name: "Integrations",
-          route: "/Integrations",
-          icon: require("@/assets/img/vectors/ic-payment-pages.svg"),
-          id: 4,
-        },
-        {
-          name: "Settings",
-          route: "/invoices",
-          icon: require("@/assets/img/vectors/ic-settings.svg"),
-          id: 5,
-        },
-      ],
-    },
+    routes: [
+      "Dashboard",
+      "Orders",
+      "Send a gift",
+      "Users",
+      "Integrations",
+      "Settings",
+      "Logout",
+    ],
   }),
 };
 </script>
 
 <style scoped>
 main {
-  background: #24292C 0% 0% no-repeat padding-box;
+  background: #24292c 0% 0% no-repeat padding-box;
 }
 
-
-#sidebar ul li {
-  color: #E5E5E5;
-  font-weight: 300;
-  font-size: 0.875rem;
-  list-style: none;
+.primary-white {
+  color: #e3e3e3;
 }
-
-.name{
-  color: #E5E5E5;
-  font-weight: 300;
-}
-
-
 
 hr {
   border-top: 1px solid #babfc6;
 }
 
-.nav-link-header {
-  color: #d0f0fd;
-  font-family: "Circular Std";
-  letter-spacing: 0px;
+.border_b {
+  border-bottom: 2px solid #56595b;
 }
 
 @media (max-width: 575.98px) {

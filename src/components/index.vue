@@ -1,21 +1,21 @@
 <template>
-  <div class="pt-5 pb-7 px-3 lg:px-6">
-    <h4 class="font-bold text-xl lg:text-2xl route">
+  <div class="py-10 mx-6 lg:mx-24">
+    <h4 class="font-bold pb-2 text-xl lg:text-2xl route">
       Welcome to Gemnote, Ashley!
     </h4>
 
     <!-- cars 1 here -->
-    <div class="mt-5">
+    <div class="mt-7">
       <card1 />
     </div>
 
     <!-- cars 2 here -->
-    <div class="mt-5">
+    <div class="mt-7">
       <card2 />
     </div>
 
     <!-- cars 3 here -->
-    <div class="mt-5">
+    <div class="mt-7">
       <card3 />
     </div>
   </div>

@@ -1,17 +1,17 @@
 <template>
   <div>
     <div class="card-holder full p-5">
-      <div class="flex py-3">
-        <p class="text-sm quad-gray font-semibold">
+      <div class="flex pt-3 pb-5">
+        <p class="text-sm primary-black font-semibold">
           Total gifts sent this year
         </p>
 
-        <div class="ml-auto">
+        <div class="ml-auto self-center">
           <button
             type="button"
-            class="focus:outline-none seeall-btn flex items-end font-medium py-2 px-5 font-13"
+            class="focus:outline-none bg-transparent font-13 py-2.5 px-7 font-medium primary-btn"
           >
-            <span>Download report</span>
+            Download report
           </button>
         </div>
       </div>
